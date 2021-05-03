@@ -377,3 +377,25 @@ class MainView(ui.View):
         self.start_button.alpha = 1
         self.ble_status.alpha = 1
         self.ble_status.text = 'CONNECT'
+
+
+class NavView(ui.View):
+    def __init__(self, app: AppSingleLaunch):
+        self.app = app
+        self.tint_color =  '#494949'  
+        self.name = "MetreAce Nav"
+        self.flex = 'WH'
+        self.mainscript = MainView()
+        self.nav = ui.NavigationView(self.mainscript)
+
+        
+
+if __name__ == '__main__':
+    app = AppSingleLaunch("MetreAce Nav")
+    if not app.is_active():
+        nav_class = NavView(app)
+        nav_view = nav_class.nav
+        nav_view.tint_color =  '#494949'                                   
+        app.will_present(nav_view)
+        nav_view.present()
+        nav_class.mainscript.init_check()
