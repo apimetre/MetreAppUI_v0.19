@@ -127,12 +127,13 @@ class BleUploader():
             
             while True:
                 if self.py_ble_uart.peripheral:
-                    ui.animate(blink, 2.0)
+                    
 
                     try:
                         if show_progress:
                             if self.progress_bar_.fillbar_.width < 0.8:
                                 self.progress_bar_.update_progress_bar(cmd_counter*.005)
+                                ui.animate(self.blink,0.1)
                             else:
                                 self.progress_bar_.update_progress_bar(cmd_counter*.0025)
 
@@ -145,6 +146,7 @@ class BleUploader():
                             in_buf = ''
                         # if events then process them
                         while len(self.event_queue) and self.py_ble_uart.peripheral:
+                            ui.animate(blink, 1.0)
                             if self.DEBUG:
                                 print('processing events')
                             event = self.event_queue.pop()
@@ -223,6 +225,7 @@ class BleUploader():
         
             #### Set the time and timezone offset (account for DST)
             time.sleep(0.2)
+            ui.animate(self.blink, 0.1)
             current_time = int(time.time())
             
             out_msg00 =json.dumps({"cmd": "set_time","time": str(current_time)})
@@ -243,6 +246,7 @@ class BleUploader():
                 file_sizes = r1['stat']
             except:
                  ConsoleAlert('Connection Error! Remove Mouthpiece, Close App, Try Again!', self.v_)
+                 self.blinker.alpha = 0
                  ble_icon_path = 'images/ble_off.png'
                  self.ble_status_icon_.image = ui.Image.named(ble_icon_path)
                  self.ble_status_icon_.background_color = 'black'
@@ -420,6 +424,7 @@ class BleUploader():
 
             conversion_status = fc.match_files(self.base_dir + '/data_files/uploaded_files', self.base_dir + '/data_files/processed_files', self.base_dir + '/data_files/converted_files', self.base_dir + '/data_files/unpaired_files')
             self.console_box_.text = 'Transfer of ' + str(len(file_list)) + ' out of ' + str(len(file_list)) + ' test files complete'
+            self.blinker.alpha  = 0
             self.progress_bar_.update_progress_bar(1)
             self.ble_status_icon_.background_color = 'white'
             self.v_['ble_status'].text = ''
