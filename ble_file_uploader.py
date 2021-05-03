@@ -73,9 +73,11 @@ class BleUploader():
     def blink(self):
         if self.blinker.alpha == 0.5:
             self.blinker.alpha = 0
-        else:
+        elif self.blinker ==1:
             self.blinker.alpha = 0.5
-    
+        elif self.blinker ==0:
+            self.blinker.alpha = 1    
+            
     def execute_transfer(self):
         global in_buf
         in_buf = b''
@@ -146,7 +148,7 @@ class BleUploader():
                             in_buf = ''
                         # if events then process them
                         while len(self.event_queue) and self.py_ble_uart.peripheral:
-                            ui.animate(blink, 1.0)
+                           
                             if self.DEBUG:
                                 print('processing events')
                             event = self.event_queue.pop()
