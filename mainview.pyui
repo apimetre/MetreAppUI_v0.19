@@ -1,0 +1,279 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{130, 100}, {66, 62}}",
+        "class" : "Button",
+        "attributes" : {
+          "action" : "",
+          "flex" : "WHLRTB",
+          "image_name" : "iob:ios7_upload_256",
+          "frame" : "{{120, 224}, {80, 32}}",
+          "title" : "Start Cloud Upload",
+          "uuid" : "A493C00C-60C5-467B-A67A-033928E5F1E2",
+          "class" : "Button",
+          "font_bold" : false,
+          "name" : "start_button",
+          "font_size" : 15
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 6}, {260, 21}}",
+        "class" : "View",
+        "attributes" : {
+          "border_width" : 2,
+          "flex" : "",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "corner_radius" : 0,
+          "class" : "View",
+          "uuid" : "3A0825D8-CFF9-4E84-9C60-216DCCB86B3C",
+          "name" : "background"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 6}, {1, 21}}",
+        "class" : "View",
+        "attributes" : {
+          "border_width" : 2,
+          "flex" : "LR",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "corner_radius" : 0,
+          "class" : "View",
+          "uuid" : "3A0825D8-CFF9-4E84-9C60-216DCCB86B3C",
+          "background_color" : "RGBA(1.000000,0.388889,0.388889,1.000000)",
+          "name" : "fill_bar"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{7, 454}, {75, 19}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "name" : "vlabel",
+          "text_color" : "RGBA(1.000000,0.941176,0.941176,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "45CF721A-D766-4BAB-9FBA-7DB6B94C177C",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "Label",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "font_size" : 8,
+          "font_name" : "HelveticaNeue-Bold"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{121, 163}, {82, 16}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "font_size" : 9,
+          "text_color" : "RGBA(1.000000,0.972222,0.972222,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "tint_color" : "RGBA(1.000000,0.944444,0.944444,1.000000)",
+          "uuid" : "9516136A-7D27-4798-9571-7DC8745C07D6",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "CONNECT",
+          "name" : "ble_status",
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{31, 27}, {73, 61}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHTB",
+          "name" : "M",
+          "text_color" : "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "107D5388-E113-4489-9D9A-D8FFE788FC0C",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "M",
+          "font_size" : 60,
+          "font_name" : "HelveticaNeue-Bold"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{84, 27}, {109, 61}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHTB",
+          "name" : "label2",
+          "text_color" : "RGBA(0.544811,0.544811,0.544811,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "28C44BC5-EAD8-4F83-9B4D-0E4492FA9AB7",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "etre",
+          "font_size" : 55,
+          "font_name" : "HelveticaNeue-Medium"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{81, 209}, {161, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "uuid" : "063302DE-01F1-44EE-BB6F-CD8F07AF0AD8",
+          "font_size" : 16,
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "tint_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "alignment" : "center",
+          "text_color" : "RGBA(1.000000,0.970588,0.970588,1.000000)",
+          "text" : "Latest Test Results",
+          "font_name" : "HelveticaNeue-Bold",
+          "class" : "Label",
+          "name" : "label3",
+          "flex" : "WHLRTB"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{291, 6}, {23, 21}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "LRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "class" : "ImageView",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "uuid" : "6895965F-4A74-4FBA-A10F-4D279E34B5C7",
+          "border_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "name" : "ble_status_icon"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{22, 241}, {273, 210}}",
+        "class" : "TableView",
+        "attributes" : {
+          "flex" : "WH",
+          "data_source_items" : "Row 1\nRow 2\nRow 3",
+          "row_height" : 36,
+          "frame" : "{{60, 140}, {200, 200}}",
+          "uuid" : "983A6452-458D-41DC-A961-21AD20A4C464",
+          "data_source_number_of_lines" : 1,
+          "class" : "TableView",
+          "data_source_delete_enabled" : false,
+          "data_source_font_size" : 17,
+          "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
+          "name" : "results_table"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{39, 91}, {244, 99}}",
+        "class" : "TextView",
+        "attributes" : {
+          "uuid" : "2E78B5C8-60A3-47BB-B133-AE88B8DBF078",
+          "font_size" : 17,
+          "frame" : "{{60, 140}, {200, 200}}",
+          "editable" : false,
+          "alignment" : "left",
+          "autocorrection_type" : "default",
+          "alpha" : 0,
+          "text_color" : "RGBA(0.922170,0.922170,0.922170,1.000000)",
+          "font_name" : "<System>",
+          "spellchecking_type" : "default",
+          "class" : "TextView",
+          "name" : "console",
+          "flex" : "WH"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{184, 27}, {65, 61}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "A",
+          "text_color" : "RGBA(0.980392,0.274510,0.274510,1.000000)",
+          "flex" : "WHTB",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "56E46B70-70A8-4E2E-864B-682F8CA66F27",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "A",
+          "font_size" : 60,
+          "font_name" : "HelveticaNeue-Bold"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{227, 27}, {68, 61}}",
+        "class" : "Label",
+        "attributes" : {
+          "name" : "label1",
+          "text_color" : "RGBA(0.541176,0.541176,0.541176,1.000000)",
+          "flex" : "WHTB",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "6C45D54E-44C2-4F55-8860-955F564BADD9",
+          "class" : "Label",
+          "alignment" : "left",
+          "text" : "ce",
+          "font_size" : 55,
+          "font_name" : "HelveticaNeue-Medium"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 480}}",
+    "class" : "View",
+    "attributes" : {
+      "name" : "",
+      "enabled" : true,
+      "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.007075,0.007075,0.007075,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, -11}, {328, 491}}",
+        "class" : "View",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
+          "class" : "View",
+          "background_color" : "RGBA(0.964623,0.964623,0.964623,1.000000)",
+          "uuid" : "FCE1DABC-490E-4EDE-BC79-803B460D0EE6",
+          "name" : "sview1"
+        },
+        "selected" : true
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 58}, {240, 150}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "HLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "daily_view",
+          "uuid" : "56103233-C9CF-4F98-9DA1-4F135C08B6E1"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 256}, {240, 150}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "HLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "weekly_view",
+          "uuid" : "80AA49A1-92F3-4427-AF06-08004127324A"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 25}, {240, 33}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "name" : "slabel",
+          "text_color" : "RGBA(1.000000,0.147059,0.147059,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "1BDC10FB-80C1-4DC4-B5FF-157B8D176D60",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Your daily averages this week",
+          "font_size" : 14,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{40, 229}, {240, 27}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "name" : "label1",
+          "text_color" : "RGBA(0.391509,0.391509,0.391509,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "E905BE45-E04D-4EC2-95D2-67910269E76F",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Your weekly averages",
+          "font_size" : 14,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 480}}",
+    "class" : "View",
+    "attributes" : {
+      "background_color" : "RGBA(0.964706,0.964706,0.964706,1.000000)",
+      "enabled" : true,
+      "tint_color" : "RGBA(0.964706,0.964706,0.964706,1.000000)",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "name" : "",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

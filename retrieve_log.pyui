@@ -1,0 +1,97 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 6}, {320, 32}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "name" : "recovery_title",
+          "frame" : "{{85, 144}, {150, 32}}",
+          "uuid" : "3798DB80-D265-479B-BC0D-0ADDE6621034",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Data Recovery",
+          "font_size" : 18,
+          "font_name" : "HelveticaNeue-Bold"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 48}, {260, 87}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "name" : "label1",
+          "frame" : "{{85, 144}, {150, 32}}",
+          "uuid" : "04E2D247-3633-4735-8D89-5FEDB6B55643",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "You must first contact your system adminstrator to receive your data log.  ",
+          "font_size" : 14,
+          "font_name" : "<System-Bold>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 139}, {260, 124}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "name" : "label2",
+          "frame" : "{{85, 144}, {150, 32}}",
+          "uuid" : "49E25A7B-E586-4DF6-B5F0-BCBD237AA230",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "If you have received your data log and copied it to your iCloud Drive, push the button below. Else, contact your system administrator before proceeding",
+          "font_size" : 14,
+          "font_name" : "<System>"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{102, 271}, {132, 32}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "CF66A1D0-2A94-4A75-AE27-C833879307DF",
+          "flex" : "WHLRTB",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(0.797170,0.797170,0.797170,1.000000)",
+          "frame" : "{{120, 144}, {80, 32}}",
+          "tint_color" : "RGBA(0.099057,0.099057,0.099057,1.000000)",
+          "border_width" : 5,
+          "border_color" : "RGBA(1.000000,0.500000,0.250000,1.000000)",
+          "title" : "recover",
+          "font_bold" : true,
+          "class" : "Button",
+          "name" : "retrieve_data_button",
+          "font_size" : 15
+        },
+        "selected" : false
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 320}}",
+    "class" : "View",
+    "attributes" : {
+      "background_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+      "enabled" : true,
+      "tint_color" : "RGBA(1.000000,0.000000,0.000000,1.000000)",
+      "name" : "",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]

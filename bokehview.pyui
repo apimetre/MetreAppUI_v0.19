@@ -1,0 +1,70 @@
+[
+  {
+    "nodes" : [
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{0, 0}, {320, 480}}",
+        "class" : "View",
+        "attributes" : {
+          "frame" : "{{110, 190}, {100, 100}}",
+          "background_color" : "RGBA(0.110849,0.110849,0.110849,1.000000)",
+          "class" : "View",
+          "name" : "bokeh_bg",
+          "uuid" : "84DB1DB2-962B-4851-B301-EB60939538B1"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 45}, {308, 93}}",
+        "class" : "Label",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "name" : "label1",
+          "text_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "frame" : "{{85, 224}, {150, 32}}",
+          "uuid" : "F22F1D59-336A-4B47-A635-5660B8D015CF",
+          "class" : "Label",
+          "alignment" : "center",
+          "text" : "Your MetreAce Results",
+          "font_size" : 30,
+          "font_name" : "HelveticaNeue-BoldItalic"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{6, 161}, {308, 208}}",
+        "class" : "WebView",
+        "attributes" : {
+          "flex" : "WH",
+          "frame" : "{{60, 140}, {200, 200}}",
+          "tint_color" : "RGBA(1.000000,1.000000,1.000000,1.000000)",
+          "uuid" : "BE89AD4F-43DF-4A20-93DD-2A164072FAB6",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "class" : "WebView",
+          "scales_to_fit" : true,
+          "name" : "webview1"
+        },
+        "selected" : true
+      }
+    ],
+    "frame" : "{{0, 0}, {320, 480}}",
+    "class" : "View",
+    "attributes" : {
+      "tint_color" : "RGBA(0.000000,0.478000,1.000000,1.000000)",
+      "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "name" : "",
+      "flex" : ""
+    },
+    "selected" : false
+  }
+]
