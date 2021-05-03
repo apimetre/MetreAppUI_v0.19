@@ -43,6 +43,8 @@ class BleUploader():
         self.INDENT_STR = '        '
         self.DEBUG = debug_status
         
+        self.blinker = self.v_['transfer_icon']
+        
         # Global variables
         self.in_buf =b''
         self.cwd = os.getcwd()
@@ -68,7 +70,11 @@ class BleUploader():
             for line in lines:
                 print(line)
 
-      
+    def blink(self):
+        if self.blinker.alpha == 0.5:
+            self.blinker.alpha = 0
+        else:
+            self.blinker.alpha = 0.5
     
     def execute_transfer(self):
         global in_buf
@@ -121,6 +127,7 @@ class BleUploader():
             
             while True:
                 if self.py_ble_uart.peripheral:
+                    ui.animate(blink, 2.0)
 
                     try:
                         if show_progress:
