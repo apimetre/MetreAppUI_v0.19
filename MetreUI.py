@@ -39,7 +39,7 @@ from app_single_launch import AppSingleLaunch
 # Using single launch lock as suggested in
 # https://forum.omz-software.com/topic/5440/prevent-duplicate-launch-from-shortcut/7
 
-APP_VERSION = 'v0.18'
+APP_VERSION = 'v0.19'
 
 
 
@@ -110,7 +110,7 @@ class MainView(ui.View):
         self.getData()
         self.results_table = self.v['results_table']
         self.restable_inst = ResultsTable(self.v, self.results_table, self.acetone, self.etime)
-        self.start_button.action = self.bleStatus
+        #self.start_button.action = self.bleStatus
         self.add_subview(self.v)
         
         # Implementation of navigation view/mainview
@@ -134,6 +134,7 @@ class MainView(ui.View):
         else:
             #self.app_console.text = 'Once MetreAce reads "UPLOAD rdy", push CONNECT (above) to initiate data transfer from MetreAce'
             self.ble_status.text = 'CONNECT'
+            self.bleStatus()
             
     def will_close(self) -> None:
         self.app.will_close()
@@ -184,7 +185,7 @@ class MainView(ui.View):
 
 # This sets up the bluetooth upload
     @ui.in_background
-    def bleStatus(self, sender):
+    def bleStatus(self):
         self.progress_bar = ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
         self.start_button.alpha = 0.5
         self.progress_bar.fillbar_outline_.alpha = 1
@@ -376,25 +377,3 @@ class MainView(ui.View):
         self.start_button.alpha = 1
         self.ble_status.alpha = 1
         self.ble_status.text = 'CONNECT'
-
-
-class NavView(ui.View):
-    def __init__(self, app: AppSingleLaunch):
-        self.app = app
-        self.tint_color =  '#494949'  
-        self.name = "MetreAce Nav"
-        self.flex = 'WH'
-        self.mainscript = MainView()
-        self.nav = ui.NavigationView(self.mainscript)
-
-        
-
-if __name__ == '__main__':
-    app = AppSingleLaunch("MetreAce Nav")
-    if not app.is_active():
-        nav_class = NavView(app)
-        nav_view = nav_class.nav
-        nav_view.tint_color =  '#494949'                                   
-        app.will_present(nav_view)
-        nav_view.present()
-        nav_class.mainscript.init_check()
