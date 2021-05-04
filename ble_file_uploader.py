@@ -48,6 +48,7 @@ class BleUploader():
         self.d1 = self.v_['dot1']
         self.d2 = self.v_['dot2']
         self.d3 = self.v_['dot3']
+        self.d4 = self.v_['dot4']
         
         # Global variables
         self.in_buf =b''
@@ -75,26 +76,45 @@ class BleUploader():
                 print(line)
 
     def blink(self):
-        if self.d0.background_color == (1.0, 0.0, 0.0, 1.0):
-            self.d1.background_color = (1.0, 0.0, 0.0, 1.0)
-            self.d2.background_color = (0.0, 0.0, 0.0, 1.0)
-            self.d3.background_color = (0.0, 0.0, 0.0, 1.0)
-            self.d0.background_color = (0.0, 0.0, 0.0, 1.0)
-        elif self.d1.background_color == (1.0, 0.0, 0.0, 1.0):
-            self.d2.background_color =  (1.0, 0.0, 0.0, 1.0)
-            self.d3.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d0.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
-        elif self.d2.background_color == (1.0, 0.0, 0.0, 1.0):
-            self.d3.background_color =  (1.0, 0.0, 0.0, 1.0)
-            self.d0.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d2.background_color =  (0.0, 0.0, 0.0, 1.0)
-        elif self.d3.background_color == (1.0, 0.0, 0.0, 1.0):
-            self.d0.background_color =  (1.0, 0.0, 0.0, 1.0)
-            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d2.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d3.background_color =  (0.0, 0.0, 0.0, 1.0)          
+        print('doing blink')
+        
+        if self.d0.alpha == 0.5:
+            print('0')
+            self.d1.alpha= 0.5
+            self.d2.alpha= 0
+            self.d3.alpha= 0
+            self.d4.alpha= 0
+            self.d0.alpha= 0
+        elif self.d1.alpha == 0.5:
+            print('1')
+            self.d2.alpha=  0.5
+            self.d3.alpha=  0
+            self.d4.alpha= 0
+            self.d0.alpha=  0
+            self.d1.alpha=  0
+        elif self.d2.alpha == 0.5:
+            print('2')
+            self.d3.alpha=  0.5
+            self.d4.alpha= 0
+            self.d0.alpha=  0
+            self.d1.alpha=  0
+            self.d2.alpha=  0
+        elif self.d3.alpha == 0.5:
+            print('3')
+            self.d4.alpha=  0.5
+            self.d0.alpha= 0
+            self.d1.alpha=  0
+            self.d2.alpha=  0
+            self.d3.alpha=  0         
+        elif self.d4.alpha == 0.5:
+            print('4')
+            self.d0.alpha=  0.5
+            self.d1.alpha= 0
+            self.d2.alpha=  0
+            self.d3.alpha=  0
+            self.d4.alpha=  0
+        else:
+            print('none of the above')
 
     def blink_dev(self):
         if self.instr_icon.alpha == 0.25:
@@ -119,10 +139,10 @@ class BleUploader():
         if self.py_ble_uart.peripheral:
             self.console_box_.alpha =1
             self.console_box_.text = ("Connecting to MetreAce instrument")
-            dev_icon_path = 'images/MetreAceDev.png'
-            self.instr_icon.image = ui.Image.named(dev_icon_path)
+            #dev_icon_path = 'images/MetreAceDev.png'
+            self.d0.alpha = 0.5
+            #self.instr_icon.image = ui.Image.named(dev_icon_path)
             self.instr_icon.alpha = 0.25
-            ui.animate(self.blink_dev, 2.0)
             
             
         def is_dst(dt=None, tzone="UTC"):
@@ -157,10 +177,13 @@ class BleUploader():
             in_buf = (out_msg + '\n').encode('utf-8')
             
             while True:
+                
                 if self.py_ble_uart.peripheral:
-                    #ui.animate(self.blink, 100)
-
-                    try:
+                    
+                    #ui.animate(self.blink, 0.1)
+                
+                    try:  
+                        #ui.animate(self.blink, 0.1)
                         if show_progress:
                             if self.progress_bar_.fillbar_.width < 0.8:
                                 self.progress_bar_.update_progress_bar(cmd_counter*.005)
@@ -177,7 +200,6 @@ class BleUploader():
                             in_buf = ''
                         # if events then process them
                         while len(self.event_queue) and self.py_ble_uart.peripheral:
-                            #ui.animate(self.blink, 100)
                             if self.DEBUG:
                                 print('processing events')
                             event = self.event_queue.pop()
@@ -240,9 +262,10 @@ class BleUploader():
             
         time.sleep(2)
         if self.py_ble_uart.peripheral:
+            print('this is what alpha d0 is ' + str(self.d0.alpha))
             self.v_['ble_status'].text = 'Connected'
             self.console_box_.text = "Connected"
-            self.d0.background_color = (1.0, 0.0, 0.0, 1.0)
+            self.d0.alpha = 0.5
             if self.DEBUG:
                 print('will be using ' + self.cwd + '/data_files/dat_files/ as current working directory for writing log files')
             global counter
@@ -459,10 +482,12 @@ class BleUploader():
             self.progress_bar_.update_progress_bar(1)
             self.ble_status_icon_.background_color = 'white'
             self.v_['ble_status'].text = ''
-            self.d0.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d2.background_color =  (0.0, 0.0, 0.0, 1.0)
-            self.d3.background_color =  (0.0, 0.0, 0.0, 1.0) 
+            self.d0.alpha =  0
+            self.d1.alpha =  0
+            self.d2.alpha =  0
+            self.d3.alpha =  0
+            self.d4.alpha =  0
+
             self.instr_icon.alpha = 0.1
             
             try:
