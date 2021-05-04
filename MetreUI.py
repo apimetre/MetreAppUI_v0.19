@@ -144,7 +144,6 @@ class MainView(ui.View):
             self.start_button.alpha = 0.5
             self.ble_status.text = ''
         else:
-            #self.app_console.text = 'Once MetreAce reads "UPLOAD rdy", push CONNECT (above) to initiate data transfer from MetreAce'
             self.ble_status.text = 'CONNECT'
             self.bleStatus()
             
