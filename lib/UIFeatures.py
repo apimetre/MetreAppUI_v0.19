@@ -29,7 +29,7 @@ class ConsoleAlert():
         self.view.add_subview(self.field)
         self.view.add_subview(self.button)
         #print(self.message)
-        ui.delay(self.close_window, 5) 
+        ui.delay(self.close_window, 3) 
         
         
         
