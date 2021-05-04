@@ -315,13 +315,13 @@ class MainView(ui.View):
         
         def animate_bar():
             cloud_progress_bar = ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
-            for i in range(0, 100):
+            for i in range(0, 200):
                 if process_done:
                     break
-                cloud_progress_bar.update_progress_bar(0.005*i + 0.15)
-                animate(self.blink, 0.1)
+                cloud_progress_bar.update_progress_bar(0.002*i + 0.15)
+                ui.animate(self.blink, 0.1)
                 if DEBUG: print(i)
-                time.sleep(0.5)
+                time.sleep(0.2)
 
     
         source_path = self.cwd + '/data_files/converted_files/'
@@ -357,7 +357,7 @@ class MainView(ui.View):
                if fnmatch.fnmatch(file, '*.json'):
 
                    dt = datetime.datetime.fromtimestamp(int(file.split('-')[0])).astimezone(timezone(tz)).strftime('%b %d, %Y, %I:%M %p')
-                   animate(self.blink, 0.1)
+                   ui.animate(self.blink, 0.1)
                    if DEBUG:
                        print('Beginning Analysis of test from ' + dt)
                    json_path = source_path + '/'+ file
