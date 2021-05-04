@@ -244,7 +244,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{39, 187}, {244, 22}}",
+        "frame" : "{{31, 96}, {264, 113}}",
         "class" : "TextView",
         "attributes" : {
           "uuid" : "2E78B5C8-60A3-47BB-B133-AE88B8DBF078",
@@ -261,7 +261,7 @@
           "name" : "console",
           "flex" : "WH"
         },
-        "selected" : false
+        "selected" : true
       },
       {
         "nodes" : [
@@ -272,7 +272,7 @@
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "name" : "dot3",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726"
@@ -288,7 +288,7 @@
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "name" : "dot2",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726"
@@ -305,7 +305,7 @@
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
           "name" : "dot1"
@@ -322,7 +322,7 @@
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
           "name" : "dot0"
@@ -333,13 +333,13 @@
         "nodes" : [
 
         ],
-        "frame" : "{{200, 124}, {5, 10}}",
+        "frame" : "{{200, 124}, {3, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.068396,0.019228,0.019228,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
           "name" : "dot5"
@@ -356,7 +356,7 @@
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
           "name" : "dot6"
@@ -373,7 +373,7 @@
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
           "name" : "dot7"
@@ -390,7 +390,7 @@
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
           "name" : "dot8"
@@ -424,10 +424,10 @@
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "class" : "ImageView",
-          "name" : "imageview1",
+          "name" : "imageview",
           "uuid" : "996FC964-DE95-489B-B72B-1D8564CA5030"
         },
-        "selected" : true
+        "selected" : false
       }
     ],
     "frame" : "{{0, 0}, {320, 480}}",
