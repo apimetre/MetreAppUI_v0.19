@@ -209,6 +209,8 @@ class MainView(ui.View):
         self.fillbar.alpha = 1
         loaded = False
         self.connect_button.alpha = 0
+        ble_icon_path = 'images/ble_disconnected.png'
+        self.ble_status_icon.image = ui.Image.named(ble_icon_path)
     
         if not loaded:
             self.ble_status.text= 'Connecting...'
@@ -260,6 +262,8 @@ class MainView(ui.View):
                 self.d8.alpha = 0
                 self.d9.alpha = 0
                 self.instr_icon.alpha = 0.1
+                self.connect_button.action = self.bleStatus()
+                self.connect_button.alpha =1
             
         else:
             self.ble_icon_path = 'images/ble_disconnected.png'
@@ -327,7 +331,7 @@ class MainView(ui.View):
     
     def main(self):
         self.ble_status.alpha = 0.5 
-        self.calc_icon.apha = 0.5
+        self.calc_icon.apha = 0.75
         self.main_progress_bar =ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
         global process_done
         process_done = False
