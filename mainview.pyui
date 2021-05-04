@@ -188,15 +188,15 @@
         "attributes" : {
           "flex" : "WH",
           "data_source_items" : "Row 1\nRow 2\nRow 3",
-          "name" : "results_table",
+          "data_source_number_of_lines" : 1,
           "frame" : "{{60, 140}, {200, 200}}",
           "class" : "TableView",
           "uuid" : "983A6452-458D-41DC-A961-21AD20A4C464",
           "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
+          "data_source_delete_enabled" : false,
           "data_source_font_size" : 17,
-          "data_source_number_of_lines" : 1,
-          "row_height" : 36,
-          "data_source_delete_enabled" : false
+          "name" : "results_table",
+          "row_height" : 36
         },
         "selected" : false
       },
@@ -244,7 +244,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{31, 96}, {264, 113}}",
+        "frame" : "{{31, 177}, {264, 32}}",
         "class" : "TextView",
         "attributes" : {
           "uuid" : "2E78B5C8-60A3-47BB-B133-AE88B8DBF078",
@@ -261,7 +261,7 @@
           "name" : "console",
           "flex" : "WH"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -405,6 +405,7 @@
         "class" : "Button",
         "attributes" : {
           "font_size" : 15,
+          "flex" : "WHLRTB",
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "CE24BFAE-AA85-4651-A4D0-7A940511E8C7",
@@ -427,17 +428,17 @@
           "name" : "imageview",
           "uuid" : "996FC964-DE95-489B-B72B-1D8564CA5030"
         },
-        "selected" : false
+        "selected" : true
       }
     ],
     "frame" : "{{0, 0}, {320, 480}}",
     "class" : "View",
     "attributes" : {
-      "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
-      "enabled" : true,
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "background_color" : "RGBA(0.007075,0.007075,0.007075,1.000000)",
+      "enabled" : true,
+      "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
       "name" : "",
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "flex" : ""
     },
     "selected" : false
