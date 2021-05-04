@@ -75,46 +75,38 @@ class BleUploader():
             for line in lines:
                 print(line)
 
-    def blink(self):
-        print('doing blink')
-        
+    def blink(self):        
         if self.d0.alpha == 0.5:
-            print('0')
             self.d1.alpha= 0.5
             self.d2.alpha= 0
             self.d3.alpha= 0
             self.d4.alpha= 0
             self.d0.alpha= 0
         elif self.d1.alpha == 0.5:
-            print('1')
             self.d2.alpha=  0.5
             self.d3.alpha=  0
             self.d4.alpha= 0
             self.d0.alpha=  0
             self.d1.alpha=  0
         elif self.d2.alpha == 0.5:
-            print('2')
             self.d3.alpha=  0.5
             self.d4.alpha= 0
             self.d0.alpha=  0
             self.d1.alpha=  0
             self.d2.alpha=  0
         elif self.d3.alpha == 0.5:
-            print('3')
             self.d4.alpha=  0.5
             self.d0.alpha= 0
             self.d1.alpha=  0
             self.d2.alpha=  0
             self.d3.alpha=  0         
         elif self.d4.alpha == 0.5:
-            print('4')
             self.d0.alpha=  0.5
             self.d1.alpha= 0
             self.d2.alpha=  0
             self.d3.alpha=  0
             self.d4.alpha=  0
-        else:
-            print('none of the above')
+
 
     def blink_dev(self):
         if self.instr_icon.alpha == 0.25:
