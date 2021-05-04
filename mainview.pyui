@@ -12,6 +12,7 @@
           "flex" : "WHLRTB",
           "image_name" : "iob:star_256",
           "frame" : "{{120, 224}, {80, 32}}",
+          "alpha" : 0.25,
           "title" : "Start Cloud Upload",
           "uuid" : "A493C00C-60C5-467B-A67A-033928E5F1E2",
           "class" : "Button",
@@ -188,15 +189,15 @@
         "attributes" : {
           "flex" : "WH",
           "data_source_items" : "Row 1\nRow 2\nRow 3",
-          "data_source_number_of_lines" : 1,
+          "row_height" : 36,
           "frame" : "{{60, 140}, {200, 200}}",
+          "data_source_number_of_lines" : 1,
           "class" : "TableView",
           "uuid" : "983A6452-458D-41DC-A961-21AD20A4C464",
+          "data_source_font_size" : 17,
           "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
           "data_source_delete_enabled" : false,
-          "data_source_font_size" : 17,
-          "name" : "results_table",
-          "row_height" : 36
+          "name" : "results_table"
         },
         "selected" : false
       },
@@ -244,7 +245,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{31, 177}, {264, 32}}",
+        "frame" : "{{31, 96}, {264, 105}}",
         "class" : "TextView",
         "attributes" : {
           "uuid" : "2E78B5C8-60A3-47BB-B133-AE88B8DBF078",
@@ -267,15 +268,17 @@
         "nodes" : [
 
         ],
-        "frame" : "{{120, 124}, {5, 10}}",
+        "frame" : "{{115, 124}, {10, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
-          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "alpha" : 0,
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
           "name" : "dot3",
-          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726"
+          "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
       },
@@ -283,15 +286,17 @@
         "nodes" : [
 
         ],
-        "frame" : "{{110, 124}, {5, 10}}",
+        "frame" : "{{105, 124}, {10, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
-          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "alpha" : 0,
           "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
           "name" : "dot2",
-          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726"
+          "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
       },
@@ -299,16 +304,38 @@
         "nodes" : [
 
         ],
-        "frame" : "{{100, 124}, {5, 10}}",
+        "frame" : "{{95, 124}, {10, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "tint_color" : "RGBA(1.000000,0.861111,0.861111,1.000000)",
+          "custom_attributes" : "\/\/\/",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "alpha" : 0,
+          "name" : "dot1",
+          "image_name" : "iob:chevron_right_256"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{85, 124}, {12, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
-          "name" : "dot1"
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "alpha" : 0,
+          "name" : "dot0",
+          "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
       },
@@ -316,16 +343,18 @@
         "nodes" : [
 
         ],
-        "frame" : "{{90, 124}, {5, 10}}",
+        "frame" : "{{125, 124}, {10, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
-          "name" : "dot0"
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "alpha" : 0,
+          "name" : "dot5",
+          "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
       },
@@ -333,16 +362,18 @@
         "nodes" : [
 
         ],
-        "frame" : "{{200, 124}, {3, 10}}",
+        "frame" : "{{190, 124}, {10, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.068396,0.019228,0.019228,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
-          "name" : "dot5"
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "alpha" : 0,
+          "name" : "dot6",
+          "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
       },
@@ -350,16 +381,18 @@
         "nodes" : [
 
         ],
-        "frame" : "{{210, 124}, {5, 10}}",
+        "frame" : "{{200, 124}, {10, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
-          "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
+          "custom_attributes" : "\/\/\/",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
-          "name" : "dot6"
+          "name" : "dot7",
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "alpha" : 0,
+          "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
       },
@@ -367,16 +400,19 @@
         "nodes" : [
 
         ],
-        "frame" : "{{220, 124}, {5, 10}}",
+        "frame" : "{{210, 124}, {10, 10}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
+          "tint_color" : "RGBA(1.000000,0.481481,0.222222,1.000000)",
           "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
           "class" : "ImageView",
           "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
-          "name" : "dot7"
+          "name" : "dot8",
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "alpha" : 0,          
+          "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
       },
@@ -384,28 +420,12 @@
         "nodes" : [
 
         ],
-        "frame" : "{{230, 124}, {5, 10}}",
-        "class" : "ImageView",
-        "attributes" : {
-          "flex" : "WHLRTB",
-          "frame" : "{{110, 190}, {100, 100}}",
-          "custom_attributes" : "\/\/\/",
-          "background_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
-          "class" : "ImageView",
-          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
-          "name" : "dot8"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{236, 96}, {59, 59}}",
+        "frame" : "{{232, 96}, {59, 59}}",
         "class" : "Button",
         "attributes" : {
-          "font_size" : 15,
           "flex" : "WHLRTB",
+          "font_size" : 15,
+          "alpha" : 0.10000000000000001,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "CE24BFAE-AA85-4651-A4D0-7A940511E8C7",
@@ -419,26 +439,65 @@
         "nodes" : [
 
         ],
-        "frame" : "{{30, 96}, {56, 73}}",
+        "frame" : "{{34, 96}, {53, 73}}",
         "class" : "ImageView",
         "attributes" : {
           "flex" : "WHLRTB",
           "frame" : "{{110, 190}, {100, 100}}",
+          "alpha" : 0.10000000000000001,
           "class" : "ImageView",
           "name" : "imageview",
           "uuid" : "996FC964-DE95-489B-B72B-1D8564CA5030"
         },
-        "selected" : true
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{220, 124}, {10, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "alpha" : 0,
+          "name" : "dot9",
+          "image_name" : "iob:chevron_right_256",
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{230, 124}, {10, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "alpha" : 0,
+          "name" : "dot10",
+          "image_name" : "iob:chevron_right_256",
+          "tint_color":  "RGBA(1.000000,0.277778,0.277778,1.000000)"
+        },
+        "selected" : false
       }
     ],
     "frame" : "{{0, 0}, {320, 480}}",
     "class" : "View",
     "attributes" : {
-      "background_color" : "RGBA(0.007075,0.007075,0.007075,1.000000)",
-      "enabled" : true,
-      "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
       "name" : "",
+      "enabled" : true,
       "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "background_color" : "RGBA(0.108491,0.108491,0.108491,1.000000)",
+      "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
       "flex" : ""
     },
     "selected" : false
