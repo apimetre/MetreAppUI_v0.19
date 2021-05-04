@@ -463,6 +463,7 @@ class BleUploader():
             self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
             self.d2.background_color =  (0.0, 0.0, 0.0, 1.0)
             self.d3.background_color =  (0.0, 0.0, 0.0, 1.0) 
+            self.instr_icon.alpha = 0.1
             
             try:
                 out_msg_txt =json.dumps({"cmd":"set_ble_state","active":False})
