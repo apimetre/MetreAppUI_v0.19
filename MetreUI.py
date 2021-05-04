@@ -62,12 +62,12 @@ class MainView(ui.View):
         self.app_console = self.v['console']
         self.app_console.alpha = 0
        
-        
         # Ble connection
-        self.start_button = self.v['start_button']
+        self.star_button = self.v['start_button']
         self.ble_icon = self.v['ble_icon']
         self.ble_status_icon = self.v['ble_status_icon']
         self.ble_status = self.v['ble_status']
+        self.connect_button = self.v['connect_button']
         ble_icon_path = 'images/ble_off.png'
         self.ble_status_icon.image = ui.Image.named(ble_icon_path)
         
@@ -82,6 +82,13 @@ class MainView(ui.View):
         self.fillbar_outline = self.v['background']
         # self.fillbar.x = 31.1
         self.fullbar = self.fillbar_outline.width
+
+        # Instr chevrons
+        self.d0 = self.v['dot0']
+        self.d1 = self.v['dot1']
+        self.d2 = self.v['dot2']
+        self.d3 = self.v['dot3']
+        self.d4 = self.v['dot4']        
         
         # Cloud chevrons
         self.d5 = self.v['dot5']
@@ -123,7 +130,6 @@ class MainView(ui.View):
         self.getData()
         self.results_table = self.v['results_table']
         self.restable_inst = ResultsTable(self.v, self.results_table, self.acetone, self.etime)
-        #self.start_button.action = self.bleStatus
         self.add_subview(self.v)
         
         # Implementation of navigation view/mainview
@@ -141,7 +147,7 @@ class MainView(ui.View):
         if len(self.files_to_upload) >=2:
             self.app_console.text = 'Beginning Upload'
             self.main()
-            self.start_button.alpha = 0.5
+            self.star_button.alpha = 0.5
             self.ble_status.text = ''
         else:
             self.ble_status.text = 'CONNECT'
@@ -198,10 +204,11 @@ class MainView(ui.View):
     @ui.in_background
     def bleStatus(self):
         self.progress_bar = ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
-        self.start_button.alpha = 0.5
+        self.star_button.alpha = 0.5
         self.progress_bar.fillbar_outline_.alpha = 1
         self.fillbar.alpha = 1
         loaded = False
+        self.connect_button.alpha = 0
     
         if not loaded:
             self.ble_status.text= 'Connecting...'
@@ -210,13 +217,13 @@ class MainView(ui.View):
             
             if ready_status:
                 done = True
-                self.start_button.alpha = 0.25
+                #self.star_button.alpha = 0.25
                 self.ble_status.text = ''
                 
                 
                 # HERE is where you trigger the main function (i.e. after the button is pushed)
                 self.main()
-                self.start_button.alpha = 1
+                self.connect_button.alpha = 1
                 return done
             else:
                 self.app_console.text = 'No breath tests are ready to be processed'
@@ -225,7 +232,7 @@ class MainView(ui.View):
                     self.ble_icon_path = 'images/ble_off.png'
                     self.ble_status_icon.image = ui.Image.named(ble_icon_path)
                     self.ble_status.text= 'CONNECT'
-                    self.start_button.alpha = 1
+                    self.startbutton.alpha = 1
                     self.progress_bar.fillbar_outline_.alpha = 0
                     self.fillbar.alpha = 0
                 else:
@@ -237,9 +244,22 @@ class MainView(ui.View):
                     self.ble_status_icon.image = ui.Image.named(ble_icon_path)
                     self.ble_status_icon.background_color = 'black'
                     self.ble_status.text= 'CONNECT'
-                    self.start_button.alpha = 1
+                    self.star_button.alpha = 1
                     self.progress_bar.fillbar_outline_.alpha = 0
                     self.fillbar.alpha = 0
+                    
+                ### THIS IS WHERE YOU SHOULD GIVE THE OPTION TO CONNECT AGAIN
+                self.d0.alpha = 0 
+                self.d1.alpha = 0
+                self.d2.alpha = 0
+                self.d3.alpha = 0
+                self.d4.alpha = 0                
+                self.d5.alpha = 0 
+                self.d6.alpha = 0
+                self.d7.alpha = 0
+                self.d8.alpha = 0
+                self.d9.alpha = 0
+                self.instr_icon.alpha = 0.1
             
         else:
             self.ble_icon_path = 'images/ble_disconnected.png'
@@ -428,9 +448,11 @@ class MainView(ui.View):
         time.sleep(3)
         self.app_console.alpha = 0
         self.app_console.text = ''
-        self.start_button.alpha = 1
+        #self.star_button.alpha = 1
+        self.connect_button.action = self.bleStatus()
         self.ble_status.alpha = 1
-        self.ble_status.text = 'CONNECT'
+        
+        #self.ble_status.text = 'CONNECT'
 
 
 class NavView(ui.View):
@@ -453,3 +475,5 @@ if __name__ == '__main__':
         app.will_present(nav_view)
         nav_view.present()
         nav_class.mainscript.init_check()
+        self.connect_button.action = self.bleStatus()
+        self.ble_status.alpha = 1
