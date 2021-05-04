@@ -43,7 +43,11 @@ class BleUploader():
         self.INDENT_STR = '        '
         self.DEBUG = debug_status
         
-        self.blinker = self.v_['transfer_icon']
+        self.instr_icon = self.v_['image_view']
+        self.d0 = self.v_['dot0']
+        self.d1 = self.v_['dot1']
+        self.d2 = self.v_['dot2']
+        self.d3 = self.v_['dot3']
         
         # Global variables
         self.in_buf =b''
@@ -71,12 +75,32 @@ class BleUploader():
                 print(line)
 
     def blink(self):
-        if self.blinker.alpha == 0.5:
-            self.blinker.alpha = 0
-        elif self.blinker.alpha ==1:
-            self.blinker.alpha = 0.5
-        elif self.blinker.alpha ==0:
-            self.blinker.alpha = 1
+        if self.d0.background_color == 'red':
+            self.d1.background_color = 'red'
+            self.d2.background_color = 'black'
+            self.d3.background_color = 'black'
+            self.d0.background_color = 'black'
+        elif self.d1.background_color == 'red':
+            self.d2.background_color = 'red'
+            self.d3.background_color = 'black'
+            self.d0.background_color = 'black'
+            self.d1.background_color = 'black'
+        elif self.d2.background_color == 'red':
+            self.d3.background_color = 'red'
+            self.d0.background_color = 'black'
+            self.d1.background_color = 'black'
+            self.d2.background_color = 'black'
+        elif self.d3.background_color == 'red':
+            self.d0.background_color = 'red'
+            self.d1.background_color = 'black'
+            self.d2.background_color = 'black'
+            self.d3.background_color = 'black'            
+
+    def blink_dev(self):
+        if self.instr_icon.alpha == 0.25:
+            self.instr_icon.alpha = 0.5
+        elif self.instr_icon.alpha == 0.5:
+            self.instr_icon.alpha = 0.25
     
     def execute_transfer(self):
         global in_buf
@@ -95,6 +119,11 @@ class BleUploader():
         if self.py_ble_uart.peripheral:
             self.console_box_.alpha =1
             self.console_box_.text = ("Connecting to MetreAce instrument")
+            dev_icon_path = 'images/MetreAceDev.png'
+            self.instr_icon.image = ui.Image.named(dev_icon_path)
+            self.instr_icon.alpha = 0.25
+            ui.animate(blink_dev, 2.0)
+            
             
         def is_dst(dt=None, tzone="UTC"):
             if dt is None:
