@@ -43,7 +43,7 @@ class BleUploader():
         self.INDENT_STR = '        '
         self.DEBUG = debug_status
         
-        self.instr_icon = self.v_['image_view']
+        self.instr_icon = self.v_['imageview']
         self.d0 = self.v_['dot0']
         self.d1 = self.v_['dot1']
         self.d2 = self.v_['dot2']
