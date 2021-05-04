@@ -5,25 +5,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{64, 106}, {55, 49}}",
-        "class" : "ImageView",
-        "attributes" : {
-          "flex" : "WHLRTB",
-          "frame" : "{{110, 190}, {100, 100}}",
-          "tint_color" : "RGBA(1.000000,0.027778,0.027778,1.000000)",
-          "class" : "ImageView",
-          "background_color" : "RGBA(1.000000,0.944444,0.944444,1.000000)",
-          "uuid" : "67D8B1DB-A72E-4BFD-A884-4545B6D015CE",
-          "name" : "transfer_icon",
-          "image_name" : "iob:arrow_swap_256"
-        },
-        "selected" : false
-      },
-      {
-        "nodes" : [
-
-        ],
-        "frame" : "{{127, 96}, {66, 62}}",
+        "frame" : "{{133, 96}, {60, 60}}",
         "class" : "Button",
         "attributes" : {
           "action" : "",
@@ -262,7 +244,7 @@
         "nodes" : [
 
         ],
-        "frame" : "{{39, 89}, {244, 120}}",
+        "frame" : "{{39, 187}, {244, 22}}",
         "class" : "TextView",
         "attributes" : {
           "uuid" : "2E78B5C8-60A3-47BB-B133-AE88B8DBF078",
@@ -278,6 +260,172 @@
           "class" : "TextView",
           "name" : "console",
           "flex" : "WH"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{120, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "name" : "dot3",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{110, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "name" : "dot2",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{100, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "name" : "dot1"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{90, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "name" : "dot0"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{200, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "name" : "dot5"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{210, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "name" : "dot6"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{220, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "name" : "dot7"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{230, 124}, {5, 10}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "custom_attributes" : "\/\/\/",
+          "background_color" : "RGBA(0.976471,0.274510,0.274510,1.000000)",
+          "class" : "ImageView",
+          "uuid" : "F5921AA4-A960-42D4-A69F-6DE07ECEA726",
+          "name" : "dot8"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{236, 96}, {59, 59}}",
+        "class" : "Button",
+        "attributes" : {
+          "font_size" : 15,
+          "frame" : "{{120, 224}, {80, 32}}",
+          "title" : "Button",
+          "uuid" : "CE24BFAE-AA85-4651-A4D0-7A940511E8C7",
+          "class" : "Button",
+          "name" : "button1",
+          "image_name" : "iob:ios7_calculator_256"
+        },
+        "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{30, 96}, {56, 60}}",
+        "class" : "ImageView",
+        "attributes" : {
+          "flex" : "WHLRTB",
+          "frame" : "{{110, 190}, {100, 100}}",
+          "class" : "ImageView",
+          "name" : "imageview1",
+          "uuid" : "996FC964-DE95-489B-B72B-1D8564CA5030"
         },
         "selected" : true
       }
