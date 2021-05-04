@@ -17,8 +17,8 @@
           "uuid" : "A493C00C-60C5-467B-A67A-033928E5F1E2",
           "class" : "Button",
           "font_bold" : false,
-          "name" : "start_button",
-          "font_size" : 15
+          "font_size" : 15,
+          "name" : "start_button"
         },
         "selected" : false
       },
@@ -189,15 +189,15 @@
         "attributes" : {
           "flex" : "WH",
           "data_source_items" : "Row 1\nRow 2\nRow 3",
-          "data_source_font_size" : 17,
+          "name" : "results_table",
           "frame" : "{{60, 140}, {200, 200}}",
           "data_source_number_of_lines" : 1,
           "background_color" : "RGBA(1.0, 1.0, 1.0, 1.0)",
           "class" : "TableView",
+          "data_source_font_size" : 17,
           "uuid" : "983A6452-458D-41DC-A961-21AD20A4C464",
-          "data_source_delete_enabled" : false,
-          "name" : "results_table",
-          "row_height" : 36
+          "row_height" : 36,
+          "data_source_delete_enabled" : false
         },
         "selected" : false
       },
@@ -239,7 +239,7 @@
           "font_size" : 55,
           "font_name" : "HelveticaNeue-Medium"
         },
-        "selected" : true
+        "selected" : false
       },
       {
         "nodes" : [
@@ -273,12 +273,12 @@
         "attributes" : {
           "flex" : "WHLRTB",
           "alpha" : 0.10000000000000001,
-          "font_size" : 15,
+          "name" : "button1",
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "CE24BFAE-AA85-4651-A4D0-7A940511E8C7",
           "class" : "Button",
-          "name" : "button1",
+          "font_size" : 15,
           "image_name" : "iob:ios7_calculator_256"
         },
         "selected" : false
@@ -307,14 +307,14 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "image_name" : "iob:chevron_right_256",
           "flex" : "WHLRTB",
+          "image_name" : "iob:chevron_right_256",
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
-          "name" : "dot0"
+          "name" : "dot0",
+          "font_size" : 15
         },
         "selected" : false
       },
@@ -326,13 +326,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot1",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot1",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -345,13 +345,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot2",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot2",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -364,13 +364,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot3",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot3",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -383,13 +383,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot4",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot4",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -402,13 +402,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot5",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot5",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -421,13 +421,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot6",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot6",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -440,13 +440,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot7",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot7",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -459,13 +459,13 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot8",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot8",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
@@ -478,26 +478,50 @@
         "class" : "Button",
         "attributes" : {
           "alpha" : 0,
-          "name" : "dot9",
           "flex" : "WHLRTB",
+          "font_size" : 15,
           "frame" : "{{120, 224}, {80, 32}}",
           "title" : "Button",
           "uuid" : "FBB2B5EE-B015-410B-83F4-88901BD8442B",
           "class" : "Button",
-          "font_size" : 15,
+          "name" : "dot9",
           "image_name" : "iob:chevron_right_256"
         },
         "selected" : false
+      },
+      {
+        "nodes" : [
+
+        ],
+        "frame" : "{{125, 149}, {80, 16}}",
+        "class" : "Button",
+        "attributes" : {
+          "uuid" : "E761B72C-CEB3-42A0-90D7-3DEBDFDA1D80",
+          "flex" : "WHLRTB",
+          "corner_radius" : 10,
+          "background_color" : "RGBA(0.702830,0.702830,0.702830,1.000000)",
+          "frame" : "{{120, 224}, {80, 32}}",
+          "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
+          "border_width" : 2,
+          "border_color" : "RGBA(1.000000,0.277778,0.277778,1.000000)",
+          "title" : "CONNECT",
+          "alpha" : 0,
+          "font_bold" : true,
+          "class" : "Button",
+          "name" : "connect_button",
+          "font_size" : 10
+        },
+        "selected" : true
       }
     ],
     "frame" : "{{0, 0}, {320, 480}}",
     "class" : "View",
     "attributes" : {
-      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
+      "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
       "enabled" : true,
+      "border_color" : "RGBA(0.000000,0.000000,0.000000,1.000000)",
       "background_color" : "RGBA(0.108491,0.108491,0.108491,1.000000)",
       "name" : "",
-      "tint_color" : "RGBA(1.000000,0.274510,0.274510,1.000000)",
       "flex" : ""
     },
     "selected" : false
