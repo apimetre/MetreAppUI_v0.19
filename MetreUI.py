@@ -70,12 +70,25 @@ class MainView(ui.View):
         self.ble_status = self.v['ble_status']
         ble_icon_path = 'images/ble_off.png'
         self.ble_status_icon.image = ui.Image.named(ble_icon_path)
+        
+        # Set up icons
+        self.instr_icon = self.v['imageview']
+        dev_icon_path = 'images/MetreAceDev.png'
+        self.instr_icon.image = ui.Image.named(dev_icon_path)
+        self.calc_icon = self.v['button1']
                 
         # Status bar
         self.fillbar = self.v['fill_bar']
         self.fillbar_outline = self.v['background']
         # self.fillbar.x = 31.1
         self.fullbar = self.fillbar_outline.width
+        
+        # Cloud chevrons
+        self.d5 = self.v['dot5']
+        self.d6 = self.v['dot6']
+        self.d7 = self.v['dot7']
+        self.d8 = self.v['dot8']
+        self.d9 = self.v['dot9']
         
         # Version label
         self.vlabel = self.v['vlabel']
@@ -130,7 +143,6 @@ class MainView(ui.View):
             self.main()
             self.start_button.alpha = 0.5
             self.ble_status.text = ''
-            #self.main()  
         else:
             #self.app_console.text = 'Once MetreAce reads "UPLOAD rdy", push CONNECT (above) to initiate data transfer from MetreAce'
             self.ble_status.text = 'CONNECT'
@@ -262,18 +274,52 @@ class MainView(ui.View):
             self.varray = []
         
     ########################################
+    def blink(self):     
+        if self.d5.alpha == 0.5:
+            self.d6.alpha= 0.5
+            self.d7.alpha= 0
+            self.d8.alpha= 0
+            self.d9.alpha= 0
+            self.d5.alpha= 0
+        elif self.d6.alpha == 0.5:
+            self.d7.alpha=  0.5
+            self.d8.alpha=  0
+            self.d9.alpha= 0
+            self.d5.alpha=  0
+            self.d6.alpha=  0
+        elif self.d7.alpha == 0.5:
+            self.d8.alpha=  0.5
+            self.d9.alpha= 0
+            self.d5.alpha=  0
+            self.d6.alpha=  0
+            self.d7.alpha=  0
+        elif self.d8.alpha == 0.5:
+            self.d9.alpha=  0.5
+            self.d5.alpha= 0
+            self.d6.alpha=  0
+            self.d7.alpha=  0
+            self.d8.alpha=  0         
+        elif self.d9.alpha == 0.5:
+            self.d5.alpha=  0.5
+            self.d6.alpha= 0
+            self.d7.alpha=  0
+            self.d8.alpha=  0
+            self.d9.alpha=  0    
     
     def main(self):
-        self.ble_status.alpha = 0.5                                           
+        self.ble_status.alpha = 0.5 
+        self.cloud_icon.apha = 0.5
         self.main_progress_bar =ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
         global process_done
         process_done = False
+        
         def animate_bar():
             cloud_progress_bar = ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
             for i in range(0, 100):
                 if process_done:
                     break
                 cloud_progress_bar.update_progress_bar(0.005*i + 0.15)
+                animate(self.blink, 0.1)
                 if DEBUG: print(i)
                 time.sleep(0.5)
 
@@ -290,8 +336,10 @@ class MainView(ui.View):
         self.app_console.alpha = 1
         if numOfFiles >1:
             self.app_console.text = str(numOfFiles-1) + ' breath tests are ready to be processed. Beginning data processing...'
+            self.d5.alpha = 0.5
         elif numOfFiles == 1:
             self.app_console.text = '1 breath test is ready to be processed. Beginning data processing...'
+            self.d5.alpha = 0.5
         else:
             self.app_console.text = 'No breath tests are ready to be processed at this time'
         time.sleep(3)
@@ -307,8 +355,9 @@ class MainView(ui.View):
         
         for file in files:
                if fnmatch.fnmatch(file, '*.json'):
-    
+
                    dt = datetime.datetime.fromtimestamp(int(file.split('-')[0])).astimezone(timezone(tz)).strftime('%b %d, %Y, %I:%M %p')
+                   animate(self.blink, 0.1)
                    if DEBUG:
                        print('Beginning Analysis of test from ' + dt)
                    json_path = source_path + '/'+ file
@@ -369,6 +418,12 @@ class MainView(ui.View):
         self.fillbar.alpha =0
         self.fillbar_outline.alpha = 0
         self.main_progress_bar.update_progress_bar(0)
+        self.d5.alpha = 0
+        self.d6.alpha = 0
+        self.d7.alpha = 0
+        self.d8.alpha = 0
+        self.d9.alpha = 0
+        self.calc_icon.alpha = 0.1
                                             
         self.app_console.text = 'Test Processing and Upload Complete.'
         time.sleep(3)
