@@ -75,7 +75,6 @@ class BleUploader():
                 print(line)
 
     def blink(self):
-        if self.d0.background_color == (1.0, 0.0, 0.0, 1.0):
             self.d1.background_color = (1.0, 0.0, 0.0, 1.0)
             self.d2.background_color = (0.0, 0.0, 0.0, 1.0)
             self.d3.background_color = (0.0, 0.0, 0.0, 1.0)
@@ -242,6 +241,7 @@ class BleUploader():
         if self.py_ble_uart.peripheral:
             self.v_['ble_status'].text = 'Connected'
             self.console_box_.text = "Connected"
+            self.d0.background_color = (1.0, 0.0, 0.0, 1.0)
             if self.DEBUG:
                 print('will be using ' + self.cwd + '/data_files/dat_files/ as current working directory for writing log files')
             global counter
