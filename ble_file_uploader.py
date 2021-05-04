@@ -459,6 +459,10 @@ class BleUploader():
             self.progress_bar_.update_progress_bar(1)
             self.ble_status_icon_.background_color = 'white'
             self.v_['ble_status'].text = ''
+            self.d0.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d2.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d3.background_color =  (0.0, 0.0, 0.0, 1.0) 
             
             try:
                 out_msg_txt =json.dumps({"cmd":"set_ble_state","active":False})
