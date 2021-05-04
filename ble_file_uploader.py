@@ -75,26 +75,26 @@ class BleUploader():
                 print(line)
 
     def blink(self):
-        if self.d0.background_color == 'red':
-            self.d1.background_color = 'red'
-            self.d2.background_color = 'black'
-            self.d3.background_color = 'black'
-            self.d0.background_color = 'black'
-        elif self.d1.background_color == 'red':
-            self.d2.background_color = 'red'
-            self.d3.background_color = 'black'
-            self.d0.background_color = 'black'
-            self.d1.background_color = 'black'
-        elif self.d2.background_color == 'red':
-            self.d3.background_color = 'red'
-            self.d0.background_color = 'black'
-            self.d1.background_color = 'black'
-            self.d2.background_color = 'black'
-        elif self.d3.background_color == 'red':
-            self.d0.background_color = 'red'
-            self.d1.background_color = 'black'
-            self.d2.background_color = 'black'
-            self.d3.background_color = 'black'            
+        if self.d0.background_color == (1.0, 0.0, 0.0, 1.0):
+            self.d1.background_color = (1.0, 0.0, 0.0, 1.0)
+            self.d2.background_color = (0.0, 0.0, 0.0, 1.0)
+            self.d3.background_color = (0.0, 0.0, 0.0, 1.0)
+            self.d0.background_color = (0.0, 0.0, 0.0, 1.0)
+        elif self.d1.background_color == (1.0, 0.0, 0.0, 1.0):
+            self.d2.background_color =  (1.0, 0.0, 0.0, 1.0)
+            self.d3.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d0.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
+        elif self.d2.background_color == (1.0, 0.0, 0.0, 1.0):
+            self.d3.background_color =  (1.0, 0.0, 0.0, 1.0)
+            self.d0.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d2.background_color =  (0.0, 0.0, 0.0, 1.0)
+        elif self.d3.background_color == (1.0, 0.0, 0.0, 1.0):
+            self.d0.background_color =  (1.0, 0.0, 0.0, 1.0)
+            self.d1.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d2.background_color =  (0.0, 0.0, 0.0, 1.0)
+            self.d3.background_color =  (0.0, 0.0, 0.0, 1.0)          
 
     def blink_dev(self):
         if self.instr_icon.alpha == 0.25:
