@@ -308,7 +308,7 @@ class MainView(ui.View):
     
     def main(self):
         self.ble_status.alpha = 0.5 
-        self.cloud_icon.apha = 0.5
+        self.calc_icon.apha = 0.5
         self.main_progress_bar =ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
         global process_done
         process_done = False
