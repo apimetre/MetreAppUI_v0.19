@@ -331,7 +331,7 @@ class MainView(ui.View):
     
     def main(self):
         self.ble_status.alpha = 0.5 
-        self.calc_icon.apha = 0.75
+        self.calc_icon.apha = 0.1
         self.main_progress_bar =ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
         global process_done
         process_done = False
@@ -394,7 +394,7 @@ class MainView(ui.View):
                        data_dict_to_send['App_Version'] = APP_VERSION
                        json_text = json.dumps(data_dict_to_send)
                        self.main_progress_bar.update_progress_bar(0.1)
-                       self.app_console.text = 'Interpretting results from test from ' + dt +'. This may take a few moments...'
+                       self.app_console.text = 'Uploading and interpreting results from test from your ' + dt +' test. This may take a few moments...'
                        pt = threading.Thread(target = animate_bar) # don't do this unless u start a parallel thread to send request
                        pt.start()
                        if DEBUG:
