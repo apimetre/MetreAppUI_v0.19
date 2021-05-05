@@ -76,32 +76,32 @@ class BleUploader():
                 print(line)
 
     def blink(self):        
-        if self.d0.alpha == 0.5:
-            self.d1.alpha= 0.5
+        if self.d0.alpha == 0.75:
+            self.d1.alpha= 0.75
             self.d2.alpha= 0
             self.d3.alpha= 0
             self.d4.alpha= 0
             self.d0.alpha= 0
-        elif self.d1.alpha == 0.5:
-            self.d2.alpha=  0.5
+        elif self.d1.alpha == 0.75:
+            self.d2.alpha=  0.75
             self.d3.alpha=  0
             self.d4.alpha= 0
             self.d0.alpha=  0
             self.d1.alpha=  0
-        elif self.d2.alpha == 0.5:
-            self.d3.alpha=  0.5
+        elif self.d2.alpha == 0.75:
+            self.d3.alpha=  0.75
             self.d4.alpha= 0
             self.d0.alpha=  0
             self.d1.alpha=  0
             self.d2.alpha=  0
-        elif self.d3.alpha == 0.5:
-            self.d4.alpha=  0.5
+        elif self.d3.alpha == 0.75:
+            self.d4.alpha=  0.75
             self.d0.alpha= 0
             self.d1.alpha=  0
             self.d2.alpha=  0
             self.d3.alpha=  0         
-        elif self.d4.alpha == 0.5:
-            self.d0.alpha=  0.5
+        elif self.d4.alpha == 0.75:
+            self.d0.alpha=  0.75
             self.d1.alpha= 0
             self.d2.alpha=  0
             self.d3.alpha=  0
@@ -132,7 +132,7 @@ class BleUploader():
             self.console_box_.alpha =1
             self.console_box_.text = ("Connecting to MetreAce instrument")
             #dev_icon_path = 'images/MetreAceDev.png'
-            self.d0.alpha = 0.5
+            self.d0.alpha = 0.75
             #self.instr_icon.image = ui.Image.named(dev_icon_path)
             self.instr_icon.alpha = 0.25
             
