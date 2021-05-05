@@ -298,32 +298,32 @@ class MainView(ui.View):
         
     ########################################
     def blink(self):     
-        if self.d5.alpha == 0.5:
-            self.d6.alpha= 0.5
+        if self.d5.alpha == 0.75:
+            self.d6.alpha= 0.75
             self.d7.alpha= 0
             self.d8.alpha= 0
             self.d9.alpha= 0
             self.d5.alpha= 0
-        elif self.d6.alpha == 0.5:
-            self.d7.alpha=  0.5
+        elif self.d6.alpha == 0.75:
+            self.d7.alpha=  0.75
             self.d8.alpha=  0
             self.d9.alpha= 0
             self.d5.alpha=  0
             self.d6.alpha=  0
-        elif self.d7.alpha == 0.5:
-            self.d8.alpha=  0.5
+        elif self.d7.alpha == 0.75:
+            self.d8.alpha=  0.75
             self.d9.alpha= 0
             self.d5.alpha=  0
             self.d6.alpha=  0
             self.d7.alpha=  0
-        elif self.d8.alpha == 0.5:
-            self.d9.alpha=  0.5
+        elif self.d8.alpha == 0.75:
+            self.d9.alpha=  0.75
             self.d5.alpha= 0
             self.d6.alpha=  0
             self.d7.alpha=  0
             self.d8.alpha=  0         
-        elif self.d9.alpha == 0.5:
-            self.d5.alpha=  0.5
+        elif self.d9.alpha == 0.75:
+            self.d5.alpha=  0.75
             self.d6.alpha= 0
             self.d7.alpha=  0
             self.d8.alpha=  0
@@ -331,7 +331,7 @@ class MainView(ui.View):
     
     def main(self):
         self.ble_status.alpha = 0.5 
-        self.calc_icon.apha = 0.1
+        self.calc_icon.apha = 1
         self.main_progress_bar =ProgressBar(self.fillbar, self.fillbar_outline, self.fullbar)
         global process_done
         process_done = False
@@ -359,10 +359,10 @@ class MainView(ui.View):
         self.app_console.alpha = 1
         if numOfFiles >1:
             self.app_console.text = str(numOfFiles-1) + ' breath tests are ready to be processed. Beginning data processing...'
-            self.d5.alpha = 0.5
+            self.d5.alpha = 0.75
         elif numOfFiles == 1:
             self.app_console.text = '1 breath test is ready to be processed. Beginning data processing...'
-            self.d5.alpha = 0.5
+            self.d5.alpha = 0.75
         else:
             self.app_console.text = 'No breath tests are ready to be processed at this time'
         time.sleep(3)
